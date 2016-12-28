@@ -22,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
     public void calcularOperacion(View view) {
         double n = Double.parseDouble(entrada.getText().toString());
         salida.append(n +"^2 = ");
-        Intent i = new Intent(this, ServicioOperacion.class);
+        //Intent i = new Intent(this, ServicioOperacion.class);
+        Intent i = new Intent(this, IntentServiceOperacion.class);
         i.putExtra("numero", n);
         startService(i);
     }
